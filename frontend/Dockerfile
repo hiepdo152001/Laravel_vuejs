@@ -4,6 +4,7 @@ FROM node:18 as dev-stage
 WORKDIR /app
 
 COPY ./ .
-RUN yarn install
+# RUN yarn install
+RUN npm i
 
-CMD yarn dev
+CMD npm run dev

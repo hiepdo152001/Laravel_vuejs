@@ -1,12 +1,14 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 }
-
+body{
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: .875rem;
+  line-height: 1.6;
+}
 a,
 .green {
   text-decoration: none;
@@ -14,22 +16,69 @@ a,
   transition: 0.4s;
   padding: 3px;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.el-button+.el-button {
+  margin-left: 10px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+.el-button--medium {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.el-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 400;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.Toastify__toast{
+  margin-top: 20px;
+}
+.Toastify__toast-body{
+  color: red;
+  font-size: 18px;
+}
+
+@media (hover: hover) {
+}
+@media(max-width:768px){
+  .search-reponsive{
+    display: none;
+    margin-left: 0px!important;
+  }
+}
+@media (max-width: 1024px) {
+  .category-menubar {
+    display: none!important;
+  }
+}
+@media (min-width: 1200px){
+  header{
+    max-width: 1140px;
+    margin: auto;
   }
 }

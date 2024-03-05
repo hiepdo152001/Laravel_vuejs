@@ -15,12 +15,14 @@ COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr
 RUN install-php-extensions gettext intl calendar redis zip pcntl gd
 RUN docker-php-ext-install pdo_mysql
 
+RUN useradd -ms /bin/bash hiepdo
+
 # Set the user
-# USER www-data
+USER hiepdo 
 
 # Set working directory
 WORKDIR /var/www/html
 
 # Copy existing application directory contents to the working directory
 COPY ./ .
-RUN composer install
+# RUN composer install
